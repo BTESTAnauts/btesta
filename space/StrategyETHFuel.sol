@@ -40,7 +40,7 @@ contract StrategyETHFuel is Ownable, ReentrancyGuard, Strategy {
         uint256 balance = address(this).balance;
         (uint256 r0, uint256 r1, ) = lpToken.getReserves();
         uint256 rIn = lpToken.token0() == weth ? r0 : r1;
-        uint256 aIn = Math.sqrt(rIn.mul(balance.mul(3988000).add(rIn.mul(3988009)))).sub(rIn.mul(1997)) / 1994;
+        uint256 aIn = Math.sqrt(rIn.mul(balance.mul(3992000).add(rIn.mul(3992004)))).sub(rIn.mul(1998)) / 1996;
         // 3. Convert that portion of ETH to farming tokens.
         address[] memory path = new address[](2);
         path[0] = weth;

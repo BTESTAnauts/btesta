@@ -71,8 +71,8 @@ contract StrategyHybrid is Ownable, ReentrancyGuard, Strategy {
     ) internal pure returns (uint256) {
         require(amtA.mul(resB) >= amtB.mul(resA), "Reversed");
 
-        uint256 a = 997;
-        uint256 b = uint256(1997).mul(resA);
+        uint256 a = 998;
+        uint256 b = uint256(1998).mul(resA);
         uint256 _c = (amtA.mul(resB)).sub(amtB.mul(resA));
         uint256 c = _c.mul(1000).div(amtB.add(resB)).mul(resA);
 
